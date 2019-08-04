@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - UIbutton
+  - tile
   layers:
   - Default
   - TransparentFX

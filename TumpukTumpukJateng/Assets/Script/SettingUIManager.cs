@@ -8,14 +8,6 @@ public class SettingUIManager : MonoBehaviour
     public Sprite ToggleOn, ToggleOff;
     public Button MusicToggle, SFXToggle;
 
-    // private void Awake()
-    // {
-    //     gameObject.SetActive(true);
-    // }
-    // private void Start()
-    // {
-    //     gameObject.SetActive(false);
-    // }
     public void MusicTogglePressed()
     {
         if (MusicToggle.image.sprite == ToggleOn)
