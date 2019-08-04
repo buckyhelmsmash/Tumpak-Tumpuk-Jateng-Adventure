@@ -39,15 +39,24 @@ public class peta : MonoBehaviour
     }
     public void SetStageMagelang()
     {
-        GameScript.stage = 5;
+        if (PlayerPrefs.GetInt("isStage4Unlocked") == 1)
+        {
+            GameScript.stage = 5;
+        }
     }
     public void SetStageBanyumas()
     {
-        GameScript.stage = 6;
+        if (PlayerPrefs.GetInt("isStage5Unlocked") == 1)
+        {
+            GameScript.stage = 6;
+        }
     }
     public void SetStageTegal()
     {
-        GameScript.stage = 7;
+        if (PlayerPrefs.GetInt("isStage6Unlocked") == 1)
+        {
+            GameScript.stage = 7;
+        }
     }
     void CheckReady()
     {
@@ -122,11 +131,6 @@ public class peta : MonoBehaviour
             lockJepara.SetActive(false);
             unlockJepara.SetActive(true);
         }
-        else
-        {
-            lockJepara.SetActive(true);
-            unlockJepara.SetActive(false);
-        }
         if (PlayerPrefs.GetInt("isStage2Unlocked") == 1)
         {
             lockBlora.SetActive(false);
@@ -160,14 +164,12 @@ public class peta : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlayerPrefs.SetInt("isStage1Unlocked", 0);
-        PlayerPrefs.SetInt("isStage2Unlocked", 0);
-        PlayerPrefs.SetInt("isStage3Unlocked", 0);
-        PlayerPrefs.SetInt("isStage4Unlocked", 0);
-        PlayerPrefs.SetInt("isStage5Unlocked", 0);
-        PlayerPrefs.SetInt("isStage6Unlocked", 0);
-
-        Debug.Log(PlayerPrefs.GetInt("isStage1Unlocked"));
+        // PlayerPrefs.SetInt("isStage1Unlocked", 0);
+        // PlayerPrefs.SetInt("isStage2Unlocked", 0);
+        // PlayerPrefs.SetInt("isStage3Unlocked", 0);
+        // PlayerPrefs.SetInt("isStage4Unlocked", 0);
+        // PlayerPrefs.SetInt("isStage5Unlocked", 0);
+        // PlayerPrefs.SetInt("isStage6Unlocked", 0);
 
         // PlayerPrefs.SetInt("starStage1", 0);
         // PlayerPrefs.SetInt("starStage2", 0);

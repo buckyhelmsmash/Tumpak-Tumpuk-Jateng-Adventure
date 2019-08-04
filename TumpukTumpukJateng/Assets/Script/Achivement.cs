@@ -114,6 +114,11 @@ public class Achivement : MonoBehaviour
         if (Is128())
         {
             is128 = true;
+            // Audio.GetComponent<AudioManager>().SkorAkhirSound();
+        }
+        if (skorAkhir.active == false)
+        {
+            Audio.GetComponent<AudioManager>().SkorAkhirSound();
         }
         CheckMilestone();
         UpdateAchivement();
@@ -189,7 +194,7 @@ public class Achivement : MonoBehaviour
                 gameObject.GetComponent<GameScript>().pauseGame();
                 isStarSet = true;
                 PlayerPrefs.SetInt("isStage" + GameScript.stage + "Unlocked", 1);
-                // Audio.GetComponent<AudioManager>().SkorAkhirSound();
+
             }
         }
         else
